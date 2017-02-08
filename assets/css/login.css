@@ -1,0 +1,135 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul ,li{
+	list-style: none;
+}
+#zhuti{
+	width: 528px;
+	height: 368px;
+	border:1px solid #666;
+	margin: 160px auto;
+}
+.header{
+	width: 520px;
+	height: 40px;
+	background: #191919;
+	margin-left: 4px;
+	margin-top: 2px;
+	border-radius: 5px; 
+}
+.land{
+	color:#fff;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	margin-left: 8px;
+	font-weight: bold;
+
+}
+.close{
+	color:#fff;
+	float: right;
+	font-size: 16px;
+	line-height: 40px;
+	margin-right: 8px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.tishi{
+	width: 454px;
+	height: 32px;
+	line-height: 32px;
+	background:#e6e6e6;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	padding-left: 10px;
+	margin-top: 6px;
+	font-size: 12px;
+}
+
+#name ,#password{
+	width: 342px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+	margin-top: 40px; 
+}
+.xingming ,.mima{
+	float: left;
+}
+#name .username{
+	width: 252px;
+	height: 24px;
+	background: #f0f0f0;
+	float: right;
+	border:1px solid #ccc;
+}
+#password .userpswd{
+	width: 252px;
+	height: 24px;
+	background: #f0f0f0;
+	float: right;
+	border:1px solid #ccc;
+
+}
+#denglu{
+	width: 202px;
+	height: 28px;
+	margin: 0 auto;
+	margin-left: 180px;	
+	margin-top: 20px;
+}
+#denglu .left{
+	width: 96px;
+	height: 28px;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	float: left;
+	border-radius: 5px;
+	color:#b33e08;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+#denglu .right{
+	width: 96px;
+	height: 28px;
+	background: #e6e6e6;
+	border: 1px solid #ccc;
+	float: right;
+	border-radius: 5px;
+	color:#b33e08;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.xian{
+	width: 528px;
+	height: 1px;
+	border-bottom:1px solid #b3c4ce;
+	margin-top: 30px;
+}
+#footer{
+	width: 528px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 20px;
+}
+#footer .guanbi{
+	width: 58px;
+	height: 28px;
+	line-height: 28px;
+	float: right;
+	border-radius: 2px;
+	color:#fff;
+	background: #191919;
+	border: 1px solid #1e90ff;
+	margin-right: 30px;
+	cursor: pointer;
+}
+.guanbi:hover{
+	background: white;
+}

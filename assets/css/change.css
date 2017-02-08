@@ -1,0 +1,80 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul ,li{
+	list-style: none;
+}
+#zhuti{
+	width: 640px;
+	height: 720px;
+	border:1px solid #666;
+	/*border:1px solid #000;*/
+	margin: 0 auto;
+}
+.header{
+	width: 640px;
+	height: 40px;
+	line-height: 40px;
+	background:  #191919;
+	border-radius: 2px; 
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+.old-password ,.new-password ,.confirm-password{
+	width: 240px;
+	height: 50px;	 
+	/*background: pink;*/
+	margin: 25px auto;
+	line-height: 50px;
+}
+.left{
+	float: left;
+
+}
+.right1{
+	float: right;
+	margin: 0 auto;
+}
+.right{
+	width: 120px;
+	height: 20px;
+	margin-top:15px;
+/*	border:0px;*/
+	float: right;
+}
+#btn{
+	width: 240px;
+	height: 50px;	 
+	/*background: pink;*/
+	margin: 0 auto;
+	margin-top: -10px;
+
+	/*line-height: 50px;*/
+}
+#btn .change{
+	width: 50px;
+	height: 30px;
+	background: #191919;
+	border:1px solid #191919;
+	border-radius: 5px;
+	float: left;
+	margin-left: 20px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+#btn .return{
+	width: 50px;
+	height: 30px;
+	background: #191919;
+	border:1px solid #191919;
+	border-radius: 5px;
+	float: right;
+	margin-right: 20px;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+
+}

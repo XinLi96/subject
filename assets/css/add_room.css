@@ -1,0 +1,15 @@
+.con{
+    width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    font-family: 微软雅黑;
+}
+.con input{
+    margin-left:10px;
+    width: 400px;
+    margin-top: 20px;
+}
+.con .btn{
+    margin-left: 40px;
+}
