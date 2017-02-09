@@ -26,5 +26,15 @@ class Relation_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function get_course_by_name_week($user_name,$week){
+        $sql = 'select * from relation r where r.teacher = '."'$user_name'".' and r.begin<='.$week.' and r.end>='.$week.'';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
+    public function get_course_by_name_day($user_name,$week,$day){
+        $sql = 'select * from relation r where r.teacher ='."'$user_name'".' and r.begin<='.$week.' and r.end>='.$week.' and r.week='.$day.'';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

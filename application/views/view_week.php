@@ -29,63 +29,120 @@
                 <td>1</td>
                 <td rowspan="2">
                     <?php
-                        foreach($result as $row){
-                            if($row->week == 1&&$row->time == 1){
-                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                        $status = $this->session->userdata('status');
+                        if($status == 1){
+                            foreach($result as $row){
+                                if($row->week == 1&&$row->time == 1){
+                                    echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                                }
+                            }
+                        }else{
+                            foreach($result1 as $row1){
+                                if($row1->week == 1&&$row1->time == 1){
+                                    echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                                }
                             }
                         }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 2&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 2&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 2&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 3&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 3&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 3&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 4&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 4&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 4&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 5&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 5&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 5&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 6&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 6&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 6&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 7&&$row->time == 1){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 7&&$row->time == 1){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 7&&$row1->time == 1){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
@@ -100,63 +157,119 @@
                 <td>3</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 1&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 1&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 1&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 2&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 2&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 2&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 3&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 3&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 3&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 4&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 4&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 4&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 5&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 5&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 5&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 6&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 6&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 6&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 7&&$row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 7&&$row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 7&&$row1->time == 2){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
@@ -174,63 +287,119 @@
                 <td>5</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 1&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 1&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 1&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 2&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 2&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 2&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 3&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 3&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 3&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 4&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 4&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 4&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 5&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 5&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 5&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 6&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 6&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 6&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 7&&$row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 7&&$row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 7&&$row1->time == 3){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
@@ -245,63 +414,119 @@
                 <td>7</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 1&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 1&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 1&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 2&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 2&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 2&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 3&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 3&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 3&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 4&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 4&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 4&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 5&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 5&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 5&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 6&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 6&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 6&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>
                 </td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->week == 7&&$row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->week == 7&&$row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                    }else{
+                        foreach($result1 as $row1){
+                            if($row1->week == 7&&$row1->time == 4){
+                                echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;
+                            }
                         }
                     }
                     ?>

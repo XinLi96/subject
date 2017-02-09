@@ -36,16 +36,31 @@ class Relation extends CI_Controller{
     }
     public function view_by_week(){
         $week = $this->input->post('week');
-        $user_id = $this->session->userdata('user_id');
-        $result = $this->relation_model->get_course_by_id_week($user_id,$week);
-        $arr['result'] = $result;
-        $this->load->view('view_week',$arr);
+        $status = $this->session->userdata('status');
+        if($status == 1){
+            $user_id = $this->session->userdata('user_id');
+            $result = $this->relation_model->get_course_by_id_week($user_id,$week);
+            $arr['result'] = $result;
+            $this->load->view('view_week',$arr);
+        }else if($status == 2){
+            $user_name = $this->session->userdata('user_name');
+            $result1 = $this->relation_model->get_course_by_name_week($user_name,$week);
+            $arr['result1'] = $result1;
+            $this->load->view('view_week',$arr);
+        }
+
     }
     public function view_by_day(){
+        $status = $this->session->userdata('status');
         $week = $this->input->post('week');
         $day = $this->input->post('day');
-        $user_id = $this->session->userdata('user_id');
-        $result = $this->relation_model->get_course_by_id_day($user_id,$week,$day);
+        if($status == 1){
+            $user_id = $this->session->userdata('user_id');
+            $result = $this->relation_model->get_course_by_id_day($user_id,$week,$day);
+        }else{
+            $user_name  = $this->session->userdata('user_name');
+            $result = $this->relation_model->get_course_by_name_day($user_name,$week,$day);
+        }
         $arr['result']=$result;
         $arr['zhou']=$week;
         $arr['ji']=$day;

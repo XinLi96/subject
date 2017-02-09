@@ -29,6 +29,7 @@
                 <td>1</td>
                 <td rowspan="2">
                     <?php
+//                        $status = $
                         foreach($result as $row){
                             if($row->time == 1){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
