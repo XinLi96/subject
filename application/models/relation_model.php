@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 class Relation_model extends CI_Model{
-    public function add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end){
+    public function add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end,$grade){
         $data = array(
             'course_id' => $course_id,
             'user_id' => $user_id,
@@ -11,7 +11,8 @@ class Relation_model extends CI_Model{
             'course_name' => $course_name,
             'room_name' => $room_name,
             'begin' => $begin,
-            'end' => $end
+            'end' => $end,
+            'grade' => $grade
         );
         $result = $this->db->insert('relation', $data);
         return $result;

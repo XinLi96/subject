@@ -20,6 +20,7 @@
             教&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;师:<input type="text" name="teacher"><br>
             周几上课:<input type="text" name="week"><br>
             上课节数:<input type="text" name="time"><br>
+            所属班级:<input type="text" name="grade"><br>
             <input type="submit" class="btn">
             <input type="reset" class="btn">
         </form>

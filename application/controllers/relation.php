@@ -12,6 +12,7 @@ class Relation extends CI_Controller{
         $teacher = $this->input->post('teacher');
         $week = $this->input->post('week');
         $time = $this->input->post('time');
+        $grade = $this->input->post('grade');
 
         $this->load->model('room_model');
         $result1 = $this->room_model->get_id_by_name($room_name);
@@ -27,7 +28,7 @@ class Relation extends CI_Controller{
         $begin = $result3->begin;
         $end = $result3->end;
 
-        $result = $this->relation_model->add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end);
+        $result = $this->relation_model->add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end,$grade);
         if($result){
             $this->load->view('index.php');
         }else{
