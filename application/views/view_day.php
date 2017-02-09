@@ -29,12 +29,21 @@
                 <td>1</td>
                 <td rowspan="2">
                     <?php
-//                        $status = $
-                        foreach($result as $row){
-                            if($row->time == 1){
-                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                        $status = $this->session->userdata('status');
+                        if($status == 1){
+                            foreach($result as $row){
+                                if($row->time == 1){
+                                    echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                                }
+                            }
+                        }else{
+                            foreach($result as $row){
+                                if($row->time == 1){
+                                    echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->grade;
+                                }
                             }
                         }
+
                     ?>
                 </td>
             </tr>
@@ -46,11 +55,21 @@
                 <td>3</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->time == 2){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    $status = $this->session->userdata('status');
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
                         }
+                    }else{
+                        foreach($result as $row){
+                            if($row->time == 2){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->grade;
+                            }
                         }
+                    }
+
                     ?>
                 </td>
             </tr>
@@ -66,11 +85,21 @@
                 <td>5</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->time == 3){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    $status = $this->session->userdata('status');
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
                         }
+                    }else{
+                        foreach($result as $row){
+                            if($row->time == 3){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->grade;
+                            }
                         }
+                    }
+
                     ?>
                 </td>
             </tr>
@@ -83,11 +112,21 @@
                 <td>7</td>
                 <td rowspan="2">
                     <?php
-                    foreach($result as $row){
-                        if($row->time == 4){
-                            echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                    $status = $this->session->userdata('status');
+                    if($status == 1){
+                        foreach($result as $row){
+                            if($row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
                         }
+                    }else{
+                        foreach($result as $row){
+                            if($row->time == 4){
+                                echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->grade;
+                            }
                         }
+                    }
+
                     ?>
                 </td>
             </tr>
