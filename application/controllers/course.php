@@ -26,5 +26,10 @@ class Course extends CI_Controller{
             echo '添加失败！！！';
         }
     }
+    public function view_course(){
+        $result = $this->course_model->view_course();
+        $arr['result'] = $result;
+        $this->load->view('view_course',$arr);
+    }
 }
 ?>

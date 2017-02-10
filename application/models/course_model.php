@@ -15,5 +15,10 @@ class Course_model extends CI_Model{
         $this->db->where('c.course_name="'.$course_name.'"');
         return $this->db->get()->row();
     }
+    public function view_course(){
+        $sql = 'select * from course';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

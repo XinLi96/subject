@@ -37,5 +37,10 @@ class Relation_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function view_relation(){
+        $sql = 'select * from relation r,user u where r.user_id = u.user_id';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

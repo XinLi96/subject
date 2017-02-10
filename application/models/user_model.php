@@ -40,5 +40,10 @@ class User_model extends CI_Model{
         $this->db->where('u.user_name="'.$user_name.'"');
         return $this->db->get()->row();
     }
+    public function view_user(){
+        $sql = 'select * from user';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

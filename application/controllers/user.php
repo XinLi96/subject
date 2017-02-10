@@ -63,5 +63,10 @@ class User extends CI_Controller{
             $this->load->view('add_room.php');
         }
     }
+    public function view_user(){
+        $result = $this->user_model->view_user();
+        $arr['result'] = $result;
+        $this->load->view('view_user',$arr);
+    }
 }
 ?>

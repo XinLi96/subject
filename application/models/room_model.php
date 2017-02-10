@@ -19,5 +19,10 @@ class Room_model extends CI_Model{
         $this->db->where('r.room_name="'.$room_name.'"');
         return $this->db->get()->row();
     }
+    public function view_room(){
+        $sql = 'select * from room';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>

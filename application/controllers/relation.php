@@ -69,7 +69,8 @@ class Relation extends CI_Controller{
     }
     public function view_relation(){
         $result = $this->relation_model->view_relation();
-        $this->load->view('view_relation');
+        $arr['result'] = $result;
+        $this->load->view('view_relation',$arr);
     }
 }
 ?>

@@ -19,5 +19,10 @@ class Room extends CI_Controller{
             }
         }
     }
+    public function view_room(){
+        $result = $this->room_model->view_room();
+        $arr['result'] = $result;
+        $this->load->view('view_room',$arr);
+    }
 }
 ?>

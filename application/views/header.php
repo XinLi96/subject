@@ -61,16 +61,16 @@
                     </li>
 
                         <?php
-                        if($status==0){
-                            echo '<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">查看<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="">查看教室</a></li>
-                            <li><a href="">查看课程</a></li>
-                            <li><a href="relation/view_relation">查看教学</a></li>
-                            <li><a href="">查看用户</a></li>
-                        </ul>
-                    </li>';
+                            if($status == 0){
+                                echo '<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">查看<i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="room/view_room">查看教室</a></li>
+                                <li><a href="course/view_course">查看课程</a></li>
+                                <li><a href="relation/view_relation">查看教学</a></li>
+                                <li><a href="user/view_user">查看用户</a></li>
+                            </ul>
+                        </li>';
                         }
                         ?>
 
