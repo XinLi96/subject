@@ -67,5 +67,9 @@ class Relation extends CI_Controller{
         $arr['ji']=$day;
         $this->load->view('view_day',$arr);
     }
+    public function view_relation(){
+        $result = $this->relation_model->view_relation();
+        $this->load->view('view_relation');
+    }
 }
 ?>
