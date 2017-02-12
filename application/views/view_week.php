@@ -62,7 +62,6 @@
                     }
                     ?>
                 </td>
-                
                 <td rowspan="2">
                     <?php
                     if($status == 1){
