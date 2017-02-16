@@ -41,7 +41,10 @@ class User_model extends CI_Model{
         return $this->db->get()->row();
     }
     public function update_pass($pass){
-
+        $user_id = $this->session->userdata('user_id');
+        $sql = 'update user set pass = '.$pass.' where user.user_id = '.$user_id.'';
+        $query = $this->db->query($sql);
+        return $query;
     }
     public function view_user(){//管理员查看所有用户信息
         $sql = 'select * from user';

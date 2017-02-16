@@ -49,7 +49,13 @@ class User extends CI_Controller{
         $pass2 = $this->input->post('pass2');
 
         if($pass1 == $pass2 && $pass1 && $pass2){
-            $this->user_model->update_pass($pass1);
+            $result = $this->user_model->update_pass($pass1);
+            if($result){
+                $this->load->view('index.php');
+            }else{
+                echo '修改失败';
+                echo '<a href="index">点击返回首页</a>';
+            }
         }else{
             echo '两次输入不一致或为空';
             echo '<a href="index">点击返回首页</a>';
