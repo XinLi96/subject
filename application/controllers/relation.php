@@ -5,7 +5,7 @@ class Relation extends CI_Controller{
         parent::__construct();
         $this->load->model('relation_model');
     }
-    public function add_relation(){
+    public function add_relation(){//管理员安排课程、教室、老师、学生、上课时间、年级
         $course_name = $this->input->post('course_name');
         $user_name = $this->input->post('user_name');
         $room_name = $this->input->post('room_name');
@@ -35,7 +35,7 @@ class Relation extends CI_Controller{
             echo '添加失败！！！';
         }
     }
-    public function view_by_week(){
+    public function view_by_week(){//学生或老师以周的方式查看自己的课程表
         $week = $this->input->post('week');
         $status = $this->session->userdata('status');
         if($status == 1){
@@ -51,7 +51,7 @@ class Relation extends CI_Controller{
         }
 
     }
-    public function view_by_day(){
+    public function view_by_day(){//学生或老师以天的方式查看自己的课程表
         $status = $this->session->userdata('status');
         $week = $this->input->post('week');
         $day = $this->input->post('day');
@@ -67,7 +67,7 @@ class Relation extends CI_Controller{
         $arr['ji']=$day;
         $this->load->view('view_day',$arr);
     }
-    public function view_relation(){
+    public function view_relation(){//管理员查看所有的上课时间人员安排
         $result = $this->relation_model->view_relation();
         $arr['result'] = $result;
         $this->load->view('view_relation',$arr);

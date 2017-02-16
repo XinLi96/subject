@@ -29,14 +29,14 @@
                 <td>1</td>
                 <td rowspan="2">
                     <?php
-                        $status = $this->session->userdata('status');
-                        if($status == 1){
-                            foreach($result as $row){
-                                if($row->week == 1&&$row->time == 1){
+                        $status = $this->session->userdata('status');//先看用户的身份
+                        if($status == 1){//学生身份课表格式
+                            foreach($result as $row){//每一节课通过将所有与自己有关的课程查出，循环所有课程判断星期几、第几节课，第几周在查询数据库时已做处理
+                                if($row->week == 1&&$row->time == 1){//看其是否是星期一的1-2节
                                     echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                                 }
                             }
-                        }else{
+                        }else{//教室身份课表格式
                             foreach($result1 as $row1){
                                 if($row1->week == 1&&$row1->time == 1){
                                     echo $row1->course_name.'<br>'.$row1->room_name.'<br>'.$row1->grade;

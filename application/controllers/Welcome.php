@@ -22,10 +22,10 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('index');
 	}
-    public function view_by_week()
+    public function view_by_week()//从header进入不同功能模块
     {
         $status = $this->session->userdata('status');
-        if($status==1 || $status==2){
+        if($status==1 || $status==2){//判断当前是否有学生或老师登录
             $this->load->view('input_week');
         }else{
             $this->load->view('login');
@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
     public function view_by_day()
     {
         $status = $this->session->userdata('status');
-        if($status==1 || $status==2){
+        if($status==1 || $status==2){//判断当前是否有学生或老师登录
             $this->load->view('input_day');
         }else{
             $this->load->view('login');
@@ -57,7 +57,7 @@ class Welcome extends CI_Controller {
     public function add_room(){
         $this->load->view('add_room');
     }
-    public function arrangement()
+    public function arrangement()//安排教学
     {
         $this->load->view('arrangement');
     }

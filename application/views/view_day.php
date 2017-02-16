@@ -29,14 +29,14 @@
                 <td>1</td>
                 <td rowspan="2">
                     <?php
-                        $status = $this->session->userdata('status');
-                        if($status == 1){
-                            foreach($result as $row){
+                        $status = $this->session->userdata('status');//先看用户身份
+                        if($status == 1){//学生查看格式
+                            foreach($result as $row){//每一节课通过将所有与自己有关的课程查出，循环所有课程判断第几节课，第几周、星期几在查询数据库时已做处理
                                 if($row->time == 1){
                                     echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                                 }
                             }
-                        }else{
+                        }else{//教室查看格式
                             foreach($result as $row){
                                 if($row->time == 1){
                                     echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->grade;
@@ -51,6 +51,7 @@
                 <td>2</td>
             </tr>
             <tr>
+
                 <td>3</td>
                 <td rowspan="2">
                     <?php

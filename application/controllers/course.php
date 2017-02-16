@@ -5,7 +5,7 @@ class Course extends CI_Controller{
         parent::__construct();
         $this->load->model('course_model');
     }
-    public function add_course(){
+    public function add_course(){//添加课程
         $course_name = $this->input->post('course_name');
         $begin = $this->input->post('begin');
         $end = $this->input->post('end');
@@ -26,7 +26,7 @@ class Course extends CI_Controller{
             echo '添加失败！！！';
         }
     }
-    public function view_course(){
+    public function view_course(){//管理员查看所有课程
         $result = $this->course_model->view_course();
         $arr['result'] = $result;
         $this->load->view('view_course',$arr);

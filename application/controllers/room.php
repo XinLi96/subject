@@ -5,7 +5,7 @@ class Room extends CI_Controller{
         parent::__construct();
         $this->load->model('room_model');
     }
-    public function add_room(){
+    public function add_room(){//管理员添加教室
         $room_name = $this->input->post('room_name');
         $result1 = $this->room_model->get_room_by_name($room_name);
         if($result1){
@@ -19,7 +19,7 @@ class Room extends CI_Controller{
             }
         }
     }
-    public function view_room(){
+    public function view_room(){//管理员查看所有教室
         $result = $this->room_model->view_room();
         $arr['result'] = $result;
         $this->load->view('view_room',$arr);

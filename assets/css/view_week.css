@@ -9,3 +9,48 @@
     height: 690px;
     text-align: center;
 }
+@media screen and (max-width: 1195px){
+    .wrapper .table-week{
+        width: 85%;
+        margin-left:3%;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 1050px){
+    .wrapper .table-week{
+        width: 70%;
+        margin-left:3%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 875px){
+    .wrapper .table-week{
+        width: 55%;
+        margin-left:3%;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 730px){
+    .wrapper .table-week{
+        width: 40%;
+        margin-left:5%;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 540px){
+    .wrapper .table-week{
+        width: 30%;
+        margin-left:5%;
+        font-size: 10px;
+    }
+
+}
+@media screen and (max-width: 428px){
+    .wrapper .table-week{
+        width: 15%;
+        margin-left:3%;
+        font-size: 8px;
+    }
+}

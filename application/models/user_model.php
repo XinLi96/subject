@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 class User_model extends CI_Model{
-    public function get_name_by_pass($user_num,$user_pass){
+    public function get_name_by_pass($user_num,$user_pass){//通过账号密码获取登录用户的信息
         $data=array(
             'num'=>$user_num,
             'pass'=>$user_pass,
@@ -8,7 +8,7 @@ class User_model extends CI_Model{
         $query=$this->db->get_where('user',$data);
         return $query->row();
     }
-    public function add_user($name,$status,$num,$nianji,$pass){
+    public function add_user($name,$status,$num,$nianji,$pass){//管理员添加用户
         $arr = array(
             'user_name' => $name,
             'num' => $num,
@@ -19,28 +19,31 @@ class User_model extends CI_Model{
         $query = $this->db->insert('user', $arr);
         return $query;
     }
-    public function get_all_by_id($user_id){
+    public function get_all_by_id($user_id){//通过用户id获取用户信息
         $arr = array(
             'user_id' => $user_id
         );
         $query = $this->db->get_where('user',$arr);
         return $query->row();
     }
-    public function add_course_to_user($tea_name){//将课程的id加到教师信息的课程号中
-        $array = array(
-            'course_id' => $tea_name
-        );
-
-        $this->db->set($array);
-        $this->db->insert('user');
-    }
-    public function get_id_by_name($user_name){
+//    public function add_course_to_user($tea_name){
+//        $array = array(
+//            'course_id' => $tea_name
+//        );
+//
+//        $this->db->set($array);
+//        $this->db->insert('user');
+//    }
+    public function get_id_by_name($user_name){//通过用户姓名获取用户信息
         $this->db->select('*');
         $this->db->from('user u');
         $this->db->where('u.user_name="'.$user_name.'"');
         return $this->db->get()->row();
     }
-    public function view_user(){
+    public function update_pass($pass){
+
+    }
+    public function view_user(){//管理员查看所有用户信息
         $sql = 'select * from user';
         $query = $this->db->query($sql);
         return $query->result();

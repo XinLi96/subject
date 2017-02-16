@@ -78,3 +78,84 @@ ul ,li{
 	cursor: pointer;
 
 }
+@media screen and (max-width: 656px){
+	#zhuti{
+		width: 80%;
+
+	}
+	.header{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 470px){
+	#zhuti{
+		width: 60%;
+	}
+	.header{
+		width: 100%;
+	}
+	.old-password ,.new-password ,.confirm-password{
+		width: 100%;
+
+	}
+
+	#btn{
+		width: 100%;
+		margin-top:100px;
+	}
+}
+
+@media screen and (max-width: 420px){
+	#zhuti {
+		width: 40%;
+	}
+	.header{
+		width: 100%;
+	}
+
+	.information li{
+		width: 100%;
+	}
+	#password{
+		width: 100%;
+	}
+	#btn{
+		width: 100%;
+
+	}
+
+}
+
+@media screen and (max-width: 340px){
+	#zhuti {
+		width: 20%;
+	}
+	.header{
+		width: 100%;
+	}
+
+	.right ,.left{
+		width: 100%;
+	}
+	#password{
+		width: 100%;
+	}
+	#btn{
+		width: 100%;
+
+	}
+	#btn .change{
+		width: 40px;
+		margin: 0 auto;
+		font-size: 2px;
+		margin-bottom: 30px;
+	}
+	#btn .return{
+		width: 40px;
+		margin: 0 auto;
+		font-size: 2px;
+		margin-bottom: 30px;
+
+	}
+
+}

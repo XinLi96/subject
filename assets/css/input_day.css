@@ -13,3 +13,63 @@
 .con .btn{
     margin-left: 40px;
 }
+@media screen and (max-width: 520px){
+    .con{
+        width: 80%;
+    }
+    .con input{
+        margin-left:10px;
+        width: 320px;
+        margin-top: 15px;
+    }
+    .con .btn{
+        width: 320px;
+        margin-left: 50px;
+    }
+
+}
+@media screen and (max-width: 500px){
+    .con{
+        width: 60%;
+    }
+    .con input{
+        margin-left:10px;
+        width: 180px;
+        margin-top: 10px;
+    }
+    .con .btn{
+        width: 180px;
+        margin-left: 55px;
+    }
+
+}
+@media screen and (max-width: 450px){
+    .con{
+        width: 40%;
+    }
+    .con input{
+        margin-left:10px;
+        width: 120px;
+        margin-top: 10px;
+    }
+    .con .btn{
+        width: 120px;
+        margin-left: 10px;
+    }
+
+}
+@media screen and (max-width: 380px){
+    .con{
+        width: 40%;
+    }
+    .con input{
+        margin-left:10px;
+        width: 80px;
+        margin-top: 10px;
+    }
+    .con .btn{
+        width: 80px;
+        margin-left: 5px;
+    }
+
+}

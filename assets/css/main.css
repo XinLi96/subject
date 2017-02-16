@@ -309,14 +309,15 @@ input.search-form:hover {
   color: #fff;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a{
+  color: #fff;
+}
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .open > a,
 .navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: #c52d2f;
-  color: #fff;
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu {

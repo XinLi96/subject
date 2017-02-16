@@ -51,7 +51,7 @@
 
                     <li>
                         <?php
-                            if($status==0){
+                            if($status==0 && $status!=null){
                                 echo '<a href="Welcome/arrangement">安排教学</a>';
                             }
                             else{
@@ -61,7 +61,7 @@
                     </li>
 
                         <?php
-                            if($status == 0){
+                            if($status == 0 && $status!=null){
                                 echo '<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">查看<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
