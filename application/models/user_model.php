@@ -40,7 +40,7 @@ class User_model extends CI_Model{
         $this->db->where('u.user_name="'.$user_name.'"');
         return $this->db->get()->row();
     }
-    public function update_pass($pass){
+    public function update_pass($pass){//修改密码更新数据库密码
         $user_id = $this->session->userdata('user_id');
         $sql = 'update user set pass = '.$pass.' where user.user_id = '.$user_id.'';
         $query = $this->db->query($sql);

@@ -17,8 +17,6 @@
             课程名称:<input type="text" name="course_name"><br>
             开始周数:<input type="text" name="begin"><br>
             结束周数:<input type="text" name="end"><br>
-<!--            教室名称:<input type="text" name="room_name"><br>-->
-<!--            负责教师:<input type="text" name="teacher"><br>-->
             <input type="submit" class="btn">
             <input type="reset" class="btn">
         </form>

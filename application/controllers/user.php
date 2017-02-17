@@ -38,17 +38,17 @@ class User extends CI_Controller{
         $arr['result'] = $result;
         $this->load->view('personal.php',$arr);
     }
-    public function change(){//改密码操作
+    public function change(){//进入修改密码界面
         $user_id = $this->session->userdata('user_id');
         $result = $this->user_model->get_all_by_id($user_id);
         $arr['result'] = $result;
         $this->load->view('change.php',$arr);
     }
-    public function change_pass(){
+    public function change_pass(){//修改密码操作
         $pass1 = $this->input->post('pass1');
         $pass2 = $this->input->post('pass2');
 
-        if($pass1 == $pass2 && $pass1 && $pass2){
+        if($pass1 == $pass2 && $pass1 && $pass2){//看两次输入密码是否一致
             $result = $this->user_model->update_pass($pass1);
             if($result){
                 $this->load->view('index.php');

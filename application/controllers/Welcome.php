@@ -25,7 +25,7 @@ class Welcome extends CI_Controller {
     public function view_by_week()//从header进入不同功能模块
     {
         $status = $this->session->userdata('status');
-        if($status==1 || $status==2){//判断当前是否有学生或老师登录
+        if($status==1 || $status==2){//判断当前是否有学生或老师登录，若没有登录转到登录界面
             $this->load->view('input_week');
         }else{
             $this->load->view('login');

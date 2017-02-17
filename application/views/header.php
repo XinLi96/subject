@@ -25,15 +25,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><!-- <img src="images/logo.png" alt="logo"> -->我的超级课程表</a>
+                <a class="navbar-brand" href="index.html">我的超级课程表</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="Welcome">首页</a></li>
-<!--                    <li><a href="#">About Us</a></li>-->
                     <?php
-                        $status = $this->session->userdata('status');
+                        $status = $this->session->userdata('status');//取当前用户登录身份，不同身份显示不同的导航栏
                         if($status == 0 && $status!=null){
                             echo '<li><a href="Welcome/add_course">添加课程</a></li>
                     <li><a href="Welcome/add_user">添加用户</a></li>
@@ -77,7 +76,7 @@
                     <li>
                         <?php
                             $user_name = $this->session->userdata('user_name');
-                            if($status == 1){
+                            if($status == 1){//0：管理员 1: 学生 2：老师
                                 $houzui = '同学';
                             }else if($status == 2){
                                 $houzui = '老师';

@@ -16,13 +16,7 @@
             <tr>
                 <td width="76"> </td>
                 <td width="86" height="50"> </td>
-<!--                <td width="100">周一</td>-->
-<!--                <td width="100">周二</td>-->
-<!--                <td width="100">周三</td>-->
-<!--                <td width="100">周四</td>-->
                 <td width="500">第<?php echo $zhou;?>周 周<?php echo $ji;?></td>
-<!--                <td width="100">周六</td>-->
-<!--                <td width="108">周日</td>-->
             </tr>
             <tr>
                 <td rowspan="4">上午</td>
