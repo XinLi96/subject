@@ -75,18 +75,6 @@ class User extends CI_Controller{
             $this->load->view('add_user.php');
         }
     }
-//    public function add_room(){
-//        $this->load->model('room_model');
-//        $room_name = $this->input->post('room_name');
-//        var_dump($room_name);
-//        die();
-//        $result = $this->room_model->add_room($room_name);
-//        if($result){
-//            $this->load->view('index.php');
-//        }else{
-//            $this->load->view('add_room.php');
-//        }
-//    }
     public function view_user(){//管理员查看所有用户的信息
         $result = $this->user_model->view_user();
         $arr['result'] = $result;
