@@ -14,6 +14,9 @@ class Relation extends CI_Controller{
         $time = $this->input->post('time');
         $grade = $this->input->post('grade');
 
+//        var_dump($course_name,$week,$room_name,$time);
+//        die();
+
         $this->load->model('room_model');
         $result1 = $this->room_model->get_id_by_name($room_name);
         $room_id = $result1->room_id;
@@ -27,6 +30,35 @@ class Relation extends CI_Controller{
         $course_id = $result3->course_id;
         $begin = $result3->begin;
         $end = $result3->end;
+
+//        echo $begin.'qq'.$end;
+        $result4 = $this->relation_model->get_room_repeat($room_id);//判断教室是否冲突
+        foreach($result4 as $row4){
+            if(($row4->week==$week)&&($row4->time==$time)&&
+                ($row4->begin<$end || $row4->begin==$end)&&
+                ($row4->end>$begin || $row4->end==$begin)){//先判断是否是同一节课，在判断周数是否有冲突
+                echo '教室发生冲突！';
+                echo '<a href="view_relation">查看教学安排</a>';
+            }
+        }
+        $result5 = $this->relation_model->get_stu_repeat($user_id);//判断学生时间是否冲突
+        foreach($result5 as $row5){
+            if(($row5->week==$week)&&($row5->time==$time)&&
+                ($row5->begin < $end || $row5->begin==$end)&&
+                ($row5->end > $begin || $row5->end==$begin)){
+                echo '学生时间冲突！';
+                echo '<a href="view_relation">查看教学安排</a>';
+            }
+        }
+        $result6 = $this->relation_model->get_tea_repeat($teacher);//判断教师时间是否冲突
+        foreach($result6 as $row6){
+            if(($row6->week==$week)&&($row6->time==$time)&&
+                ($row6->begin < $end || $row6->begin==$end)&&
+                ($row6->end > $begin || $row6->end==$begin)){
+                echo '教师时间冲突！';
+                echo '<a href="view_relation">查看教学安排</a>';
+            }
+        }
 
         $result = $this->relation_model->add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end,$grade);
         if($result){
@@ -71,6 +103,13 @@ class Relation extends CI_Controller{
         $result = $this->relation_model->view_relation();
         $arr['result'] = $result;
         $this->load->view('view_relation',$arr);
+    }
+    public function del(){//管理员删除
+        $relation_id = $_GET['relation_id'];
+        $result = $this->relation_model->del($relation_id);
+        if($result){
+            redirect('relation/view_relation');
+        }
     }
 }
 ?>

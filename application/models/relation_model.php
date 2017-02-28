@@ -42,5 +42,41 @@ class Relation_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function del($relation_id){
+        $sql = 'delete from relation where relation.relation_id = '.$relation_id.'';
+        $query = $this->db->query($sql);
+        return $query;
+    }
+    public function get_room_repeat($room_id){
+        $sql = 'select * from relation r where r.room_id='.$room_id.'';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
+    public function get_stu_repeat($user_id){
+        $sql = 'select * from relation r where r.user_id='.$user_id.'';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
+    public function get_tea_repeat($teacher){
+        $sql = 'select * from relation r where r.teacher='."'$teacher'".'';
+        $query = $this->db->query($sql);
+        return $query->result();
+    }
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -20,5 +20,10 @@ class Course_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function del($course_id){
+        $sql = 'delete from course where course.course_id = '.$course_id.'';
+        $query = $this->db->query($sql);
+        return $query;
+    }
 }
 ?>

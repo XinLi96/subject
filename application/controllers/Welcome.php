@@ -59,6 +59,12 @@ class Welcome extends CI_Controller {
     }
     public function arrangement()//安排教学
     {
-        $this->load->view('arrangement');
+        $this->load->model('course_model');
+        $result = $this->course_model->view_course();
+        $arr['result'] = $result;
+        $this->load->model('room_model');
+        $result1 = $this->room_model->view_room();
+        $arr['result1'] = $result1;
+        $this->load->view('arrangement',$arr);
     }
 }

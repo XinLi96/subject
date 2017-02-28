@@ -24,5 +24,12 @@ class Room extends CI_Controller{
         $arr['result'] = $result;
         $this->load->view('view_room',$arr);
     }
+    public function del(){
+        $room_id = $_GET['room_id'];
+        $result = $this->room_model->del($room_id);
+        if($result){
+            redirect('room/view_room');
+        }
+    }
 }
 ?>

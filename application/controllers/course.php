@@ -31,5 +31,12 @@ class Course extends CI_Controller{
         $arr['result'] = $result;
         $this->load->view('view_course',$arr);
     }
+    public function del(){
+        $course_id = $_GET['course_id'];
+        $result = $this->course_model->del($course_id);
+        if($result){
+            redirect('course/view_course');
+        }
+    }
 }
 ?>

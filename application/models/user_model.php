@@ -51,5 +51,10 @@ class User_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function del($user_id){
+        $sql = 'delete from user where user.user_id = '.$user_id.'';
+        $query = $this->db->query($sql);
+        return $query;
+    }
 }
 ?>

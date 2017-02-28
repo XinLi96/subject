@@ -24,5 +24,10 @@ class Room_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result();
     }
+    public function del($room_id){
+        $sql = 'delete from room where room.room_id = '.$room_id.'';
+        $query = $this->db->query($sql);
+        return $query;
+    }
 }
 ?>
