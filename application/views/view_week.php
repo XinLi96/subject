@@ -14,7 +14,7 @@
     <div class="wrapper">
         <table style="color:#000" border="1" class="table-week">
             <tr>
-                <td width="76"> </td>
+                <td width="76"><?php echo '第'.$zs.'周';?></td>
                 <td width="86" height="50"> </td>
                 <td width="100">周一</td>
                 <td width="100">周二</td>

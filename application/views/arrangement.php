@@ -21,8 +21,8 @@
                 <?php foreach($result as $row){?>
                     <option value="<?php echo $row->course_name;?>"><?php echo $row->course_name;?></option>
                 <?php }?>
-            </select> <br>
-            关联用户:<input type="text" name="user_name" placeholder="学生姓名"><br><br>
+            </select> <br><br>
+<!--            关联用户:<input type="text" name="user_name" placeholder="学生姓名"><br>-->
 <!--            所用教室:<input type="text" name="room_name" placeholder="教室名称。如：三号楼-105"><br>-->
             所用教室:&nbsp;
             <select name="room_name" id="xx">

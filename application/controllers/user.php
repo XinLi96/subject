@@ -16,10 +16,30 @@ class User extends CI_Controller{
             $arr = array(
                 'user_name' => $result->user_name,
                 'status' => $result->status,
-                'user_id' => $result->user_id
+                'user_id' => $result->user_id,
+                'grade' => $result->start_school
             );
             $this->session->set_userdata($arr);//将用户信息存在session中
-            $this->load->view('index.php');
+
+            $this->load->model('relation_model');
+            $zs = date('m');//以电脑日期中的月份取出模拟为当前周数
+
+            $status = $this->session->userdata('status');
+            if($status == 1){
+                $grade = $this->session->userdata('grade');
+                $result = $this->relation_model->get_course_by_id_week($grade,$zs);
+                $arr['result'] = $result;
+                $arr['zs'] = $zs;
+                $this->load->view('view_week',$arr);
+            }else if($status == 2){
+                $user_name = $this->session->userdata('user_name');
+                $result1 = $this->relation_model->get_course_by_name_week($user_name,$zs);
+                $arr['result1'] = $result1;
+                $arr['zs'] = $zs;
+                $this->load->view('view_week',$arr);
+            }else{
+                $this->load->view('index.php');
+            }
         }else{
             $this->load->view('login.php');
         }

@@ -7,7 +7,7 @@ class Relation extends CI_Controller{
     }
     public function add_relation(){//管理员安排课程、教室、老师、学生、上课时间、年级
         $course_name = $this->input->post('course_name');
-        $user_name = $this->input->post('user_name');
+//        $user_name = $this->input->post('user_name');
         $room_name = $this->input->post('room_name');
         $teacher = $this->input->post('teacher');
         $week = $this->input->post('week');
@@ -21,9 +21,9 @@ class Relation extends CI_Controller{
         $result1 = $this->room_model->get_id_by_name($room_name);
         $room_id = $result1->room_id;
 
-        $this->load->model('user_model');
-        $result2 = $this->user_model->get_id_by_name($user_name);
-        $user_id = $result2->user_id;
+//        $this->load->model('user_model');
+//        $result2 = $this->user_model->get_id_by_name($user_name);
+//        $user_id = $result2->user_id;
 
         $this->load->model('course_model');
         $result3 = $this->course_model->get_id_by_name($course_name);
@@ -38,18 +38,18 @@ class Relation extends CI_Controller{
                 ($row4->begin<$end || $row4->begin==$end)&&
                 ($row4->end>$begin || $row4->end==$begin)){//先判断是否是同一节课，在判断周数是否有冲突
                 echo '教室发生冲突！';
-                echo '<a href="view_relation">查看教学安排</a>';
+                echo '<a href="relation/view_relation">查看教学安排</a>';
             }
         }
-        $result5 = $this->relation_model->get_stu_repeat($user_id);//判断学生时间是否冲突
-        foreach($result5 as $row5){
-            if(($row5->week==$week)&&($row5->time==$time)&&
-                ($row5->begin < $end || $row5->begin==$end)&&
-                ($row5->end > $begin || $row5->end==$begin)){
-                echo '学生时间冲突！';
-                echo '<a href="view_relation">查看教学安排</a>';
-            }
-        }
+//        $result5 = $this->relation_model->get_stu_repeat($user_id);//判断学生时间是否冲突
+//        foreach($result5 as $row5){
+//            if(($row5->week==$week)&&($row5->time==$time)&&
+//                ($row5->begin < $end || $row5->begin==$end)&&
+//                ($row5->end > $begin || $row5->end==$begin)){
+//                echo '学生时间冲突！';
+//                echo '<a href="view_relation">查看教学安排</a>';
+//            }
+//        }
         $result6 = $this->relation_model->get_tea_repeat($teacher);//判断教师时间是否冲突
         foreach($result6 as $row6){
             if(($row6->week==$week)&&($row6->time==$time)&&
@@ -60,7 +60,7 @@ class Relation extends CI_Controller{
             }
         }
 
-        $result = $this->relation_model->add_relation($course_id,$user_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end,$grade);
+        $result = $this->relation_model->add_relation($course_id,$room_id,$week,$time,$teacher,$course_name,$room_name,$begin,$end,$grade);
         if($result){
             $this->load->view('index.php');
         }else{
@@ -72,24 +72,28 @@ class Relation extends CI_Controller{
         $status = $this->session->userdata('status');
         if($status == 1){
             $user_id = $this->session->userdata('user_id');
-            $result = $this->relation_model->get_course_by_id_week($user_id,$week);
+            $grade = $this->session->userdata('grade');
+            $result = $this->relation_model->get_course_by_id_week($grade,$week);
             $arr['result'] = $result;
+            $arr['zs'] = $week;
             $this->load->view('view_week',$arr);
         }else if($status == 2){
             $user_name = $this->session->userdata('user_name');
             $result1 = $this->relation_model->get_course_by_name_week($user_name,$week);
             $arr['result1'] = $result1;
+            $arr['zs'] = $week;
             $this->load->view('view_week',$arr);
         }
-
     }
+
     public function view_by_day(){//学生或老师以天的方式查看自己的课程表
         $status = $this->session->userdata('status');
         $week = $this->input->post('week');
         $day = $this->input->post('day');
         if($status == 1){
             $user_id = $this->session->userdata('user_id');
-            $result = $this->relation_model->get_course_by_id_day($user_id,$week,$day);
+            $grade = $this->session->userdata('grade');
+            $result = $this->relation_model->get_course_by_id_day($grade,$week,$day);
         }else{
             $user_name  = $this->session->userdata('user_name');
             $result = $this->relation_model->get_course_by_name_day($user_name,$week,$day);

@@ -26,14 +26,7 @@ class User_model extends CI_Model{
         $query = $this->db->get_where('user',$arr);
         return $query->row();
     }
-//    public function add_course_to_user($tea_name){
-//        $array = array(
-//            'course_id' => $tea_name
-//        );
-//
-//        $this->db->set($array);
-//        $this->db->insert('user');
-//    }
+
     public function get_id_by_name($user_name){//通过用户姓名获取用户信息
         $this->db->select('*');
         $this->db->from('user u');
