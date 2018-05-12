@@ -4,6 +4,7 @@ class User extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->model('select_model');
     }
     public function index(){
         $this->load->view('index.php');
@@ -25,9 +26,13 @@ class User extends CI_Controller{
             $zs = date('m');//以电脑日期中的月份取出模拟为当前周数
 
             $status = $this->session->userdata('status');
+            $user_id = $this->session->userdata('user_id');
             if($status == 1){
                 $grade = $this->session->userdata('grade');
                 $result = $this->relation_model->get_course_by_id_week($grade,$zs);
+                $sleResult = $this->select_model->get_seelct_by_id_week($user_id,$zs);
+
+                $arr['sleResult'] = $sleResult;
                 $arr['result'] = $result;
                 $arr['zs'] = $zs;
                 $this->load->view('view_week',$arr);

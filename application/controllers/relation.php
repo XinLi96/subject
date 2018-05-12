@@ -4,6 +4,7 @@ class Relation extends CI_Controller{
     {
         parent::__construct();
         $this->load->model('relation_model');
+        $this->load->model('select_model');
     }
     public function add_relation(){//管理员安排课程、教室、老师、学生、上课时间、年级
         $course_name = $this->input->post('course_name');
@@ -74,8 +75,13 @@ class Relation extends CI_Controller{
             $user_id = $this->session->userdata('user_id');
             $grade = $this->session->userdata('grade');
             $result = $this->relation_model->get_course_by_id_week($grade,$week);
+
+            $sleResult = $this->select_model->get_seelct_by_id_week($user_id,$week);
+
             $arr['result'] = $result;
             $arr['zs'] = $week;
+            $arr['sleResult'] = $sleResult;
+
             $this->load->view('view_week',$arr);
         }else if($status == 2){
             $user_name = $this->session->userdata('user_name');
@@ -94,6 +100,7 @@ class Relation extends CI_Controller{
             $user_id = $this->session->userdata('user_id');
             $grade = $this->session->userdata('grade');
             $result = $this->relation_model->get_course_by_id_day($grade,$week,$day);
+            $sleResult = $this->select_model->get_select_by_id_day($user_id,$week,$day);
         }else{
             $user_name  = $this->session->userdata('user_name');
             $result = $this->relation_model->get_course_by_name_day($user_name,$week,$day);
@@ -101,6 +108,7 @@ class Relation extends CI_Controller{
         $arr['result']=$result;
         $arr['zhou']=$week;
         $arr['ji']=$day;
+        $arr['sleResult']=$sleResult;
         $this->load->view('view_day',$arr);
     }
     public function view_relation(){//管理员查看所有的上课时间人员安排

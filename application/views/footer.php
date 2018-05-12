@@ -20,28 +20,28 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="pull-right">
-                        <li><a href="#">Address:&nbsp;哈尔滨学府路74号C区</a></li>
+                        <li><a href="#">Address:&nbsp;哈尔滨市学府路74号</a></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="pull-right">
-                        <li><a href="#">QQ:&nbsp;291750956</a></li>
+                        <li><a href="#">QQ:&nbsp;907670791</a></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="pull-right">
-                        <li><a href="#">WeiXin:&nbsp;li230826</a></li>
+                        <li><a href="#">WeiXin:&nbsp;15145087871</a></li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="pull-right">
-                        <li><a href="#">Tel:&nbsp;18845074934</a></li>
+                        <li><a href="#">Tel:&nbsp;15145087871</a></li>
                     </ul>
                 </div>
             </div>

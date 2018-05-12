@@ -31,7 +31,7 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">欢迎来到我的超级课程表！！！</h1>
+                                    <h1 class="animation animated-item-1">欢迎来到校园课程网！！！</h1>
                                     <h2 class="animation animated-item-2">高等数学、线性代数、C语言、JAVA、大学物理....</h2>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">欢迎来到我的超级课程表！！！</h1>
+                                    <h1 class="animation animated-item-1">欢迎来到校园课程网！！！</h1>
                                     <h2 class="animation animated-item-2">高等数学、线性代数、C语言、JAVA、大学物理....</h2>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">欢迎来到我的超级课程表！！！</h1>
+                                    <h1 class="animation animated-item-1">欢迎来到校园课程网！！！</h1>
                                     <h2 class="animation animated-item-2">高等数学、线性代数、C语言、JAVA、大学物理....</h2>
                                 </div>
                             </div>

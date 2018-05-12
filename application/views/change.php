@@ -32,7 +32,7 @@
 
             <div id="btn">
                 <button class="change" type="submit">确&nbsp;&nbsp;认</button>
-                <a href="user/personal"><button class="return">返&nbsp;&nbsp;回</button></a>
+                <a href="user/personal"><button type="" class="return">返&nbsp;&nbsp;回</button></a>
             </div>
         </form>
     </div>

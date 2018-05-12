@@ -67,4 +67,11 @@ class Welcome extends CI_Controller {
         $arr['result1'] = $result1;
         $this->load->view('arrangement',$arr);
     }
+    public function watch_video(){
+        $this->load->view('watch_video.php');
+    }
+    public function select_center(){
+        $this->load->view('select_center.php');
+    }
+
 }

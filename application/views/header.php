@@ -25,28 +25,52 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">我的超级课程表</a>
+                <a class="navbar-brand" href="index.html">校园课程网</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="Welcome">首页</a></li>
+
                     <?php
-                        $status = $this->session->userdata('status');//取当前用户登录身份，不同身份显示不同的导航栏
+                    $status = $this->session->userdata('status');//取当前用户登录身份，不同身份显示不同的导航栏
+
+                    if($status==1){
+                        echo '<li><a href="select/get_all_select">选课中心</a></li>';
+                    }
+                    ?>
+
+                    <?php
                         if($status == 0 && $status!=null){
                             echo '<li><a href="Welcome/add_course">添加课程</a></li>
-                    <li><a href="Welcome/add_user">添加用户</a></li>
-                    <li><a href="Welcome/add_room">添加教室</a></li>';
+                                        <li><a href="Welcome/add_user">添加用户</a></li>
+                                        <li><a href="Welcome/add_room">添加教室</a></li>';
                         }else{
                             echo '<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">查看课表<i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Welcome/view_by_week">按周查看</a></li>
-                            <li><a href="Welcome/view_by_day">按天查看</a></li>
-                        </ul>
-                    </li>';
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">查看课表<i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="Welcome/view_by_week">按周查看</a></li>
+                                        <li><a href="Welcome/view_by_day">按天查看</a></li>
+                                    </ul>
+                                </li>';
                         }
                     ?>
+                    <?php
+                        if($status!=0){
+                            echo '<li>
+                                    <a href="message/to_message">留言板</a>
+                                </li>';
+                        }
+                    ?>
+                    <?php
+                    if($status!=0){
+                        echo '<li>
+                                <a href="Welcome/watch_video">观看视频</a>
+                            </li>';
+                    }
+                    ?>
+
+
 
                     <li>
                         <?php
@@ -54,7 +78,8 @@
                                 echo '<a href="Welcome/arrangement">安排教学</a>';
                             }
                             else{
-                                echo '<a href="Welcome/contact">联系我们</a>';
+//                                echo '<a href="Welcome/contact">联系我们</a>';
+                                echo '<a href="select/quit_select">可退课</a>';
                             }
                         ?>
                     </li>
@@ -68,6 +93,7 @@
                                 <li><a href="course/view_course">查看课程</a></li>
                                 <li><a href="relation/view_relation">查看教学</a></li>
                                 <li><a href="user/view_user">查看用户</a></li>
+                                <li><a href="message/view_mess">查看留言</a></li>
                             </ul>
                         </li>';
                         }

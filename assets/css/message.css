@@ -1,0 +1,42 @@
+ol,ul{
+    list-style: none;
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+.messageOne{
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #000000;
+    margin-top: 10px;
+}
+.oneLeft{
+    width: 30%;
+    float: left;
+    border-right: 1px solid #000000;
+    margin-left: 1%;
+}
+.oneRight{
+    width: 68%;
+    float: left;
+    margin-left: 1%;
+}
+.addMessage{
+}
+.addMessName,.addMessEmail{
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-left: 1%;
+}
+.addMessCon{
+    margin-top: 20px;
+    margin-left: 1%;
+}
+.messageBtn{
+    margin-left: 48%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+

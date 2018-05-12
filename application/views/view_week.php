@@ -36,6 +36,11 @@
                                     echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                                 }
                             }
+                            foreach($sleResult as $row){
+                                if($row->sl_week == 1&&$row->sl_time == 1){//看其是否是星期一的1-2节
+                                    echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                                }
+                            }
                         }else{//教室身份课表格式
                             foreach($result1 as $row1){
                                 if($row1->week == 1&&$row1->time == 1){
@@ -51,6 +56,11 @@
                         foreach($result as $row){
                             if($row->week == 2&&$row->time == 1){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 2&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -70,6 +80,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 3&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 3&&$row1->time == 1){
@@ -85,6 +100,11 @@
                         foreach($result as $row){
                             if($row->week == 4&&$row->time == 1){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 4&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -104,6 +124,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 5&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 5&&$row1->time == 1){
@@ -121,6 +146,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 6&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 6&&$row1->time == 1){
@@ -136,6 +166,11 @@
                         foreach($result as $row){
                             if($row->week == 7&&$row->time == 1){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 7&&$row->sl_time == 1){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -163,6 +198,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 1&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 1&&$row1->time == 2){
@@ -178,6 +218,11 @@
                         foreach($result as $row){
                             if($row->week == 2&&$row->time == 2){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 2&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -197,6 +242,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 3&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 3&&$row1->time == 2){
@@ -212,6 +262,11 @@
                         foreach($result as $row){
                             if($row->week == 4&&$row->time == 2){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 4&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -231,6 +286,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 5&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 5&&$row1->time == 2){
@@ -248,6 +308,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 6&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 6&&$row1->time == 2){
@@ -263,6 +328,11 @@
                         foreach($result as $row){
                             if($row->week == 7&&$row->time == 2){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 7&&$row->sl_time == 2){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -293,6 +363,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 1&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 1&&$row1->time == 3){
@@ -308,6 +383,11 @@
                         foreach($result as $row){
                             if($row->week == 2&&$row->time == 3){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 2&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -327,6 +407,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 3&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 3&&$row1->time == 3){
@@ -342,6 +427,11 @@
                         foreach($result as $row){
                             if($row->week == 4&&$row->time == 3){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 4&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -361,6 +451,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 5&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 5&&$row1->time == 3){
@@ -378,6 +473,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 6&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 6&&$row1->time == 3){
@@ -393,6 +493,11 @@
                         foreach($result as $row){
                             if($row->week == 7&&$row->time == 3){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 7&&$row->sl_time == 3){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -420,6 +525,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 1&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 1&&$row1->time == 4){
@@ -435,6 +545,11 @@
                         foreach($result as $row){
                             if($row->week == 2&&$row->time == 4){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 2&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -454,6 +569,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 3&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 3&&$row1->time == 4){
@@ -469,6 +589,11 @@
                         foreach($result as $row){
                             if($row->week == 4&&$row->time == 4){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 4&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
@@ -488,6 +613,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 5&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 5&&$row1->time == 4){
@@ -505,6 +635,11 @@
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
                             }
                         }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 6&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
+                            }
+                        }
                     }else{
                         foreach($result1 as $row1){
                             if($row1->week == 6&&$row1->time == 4){
@@ -520,6 +655,11 @@
                         foreach($result as $row){
                             if($row->week == 7&&$row->time == 4){
                                 echo $row->course_name.'<br>'.$row->room_name.'<br>'.$row->teacher;
+                            }
+                        }
+                        foreach($sleResult as $row){
+                            if($row->sl_week == 7&&$row->sl_time == 4){
+                                echo $row->sl_name.'<br>'.$row->sl_room.'<br>'.$row->sl_teacher;
                             }
                         }
                     }else{
